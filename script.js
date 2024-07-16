@@ -1,32 +1,24 @@
 function convertToRoman(num) {
-  const romanNumerals = [
-    { value: 1000, numeral: 'M' },
-    { value: 900, numeral: 'CM' },
-    { value: 500, numeral: 'D' },
-    { value: 400, numeral: 'CD' },
-    { value: 100, numeral: 'C' },
-    { value: 90, numeral: 'XC' },
-    { value: 50, numeral: 'L' },
-    { value: 40, numeral: 'XL' },
-    { value: 10, numeral: 'X' },
-    { value: 9, numeral: 'IX' },
-    { value: 5, numeral: 'V' },
-    { value: 4, numeral: 'IV' },
-    { value: 1, numeral: 'I' }
-  ];
+  	const obj = {
+      0:['M',1000], 
+      1:['D', 500], 
+      2:['C', 100], 
+      3:['L', 50], 
+      4:['X', 10], 
+      5:['V', 5], 
+      6:['I', 1]
+    };
 
-  let roman = '';
-
-  for (let i = 0; i < romanNumerals.length; i++) {
-    while (num >= romanNumerals[i].value) {
-      roman += romanNumerals[i].numeral;
-      num -= romanNumerals[i].value;
-    }
-  }
-
-  return roman;
+	
+  //your code here
+	
 }
+// You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-// Example usage:
-let number = 1994;
-console.log(convertToRoman(number)); // Output: MCMXCIV
+console.log(convertToRoman(36));
+
+
+
+
+// do not edit below this line
+module.exports = convertToRoman
